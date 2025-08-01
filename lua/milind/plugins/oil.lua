@@ -30,6 +30,6 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if you prefer nvim-web-devicons
   lazy = false,
   keys = {
-    { '<leader>e', '<CMD>Oil --float<CR>', { desc = 'Open Oil [E]xplorer' } },
+    { '<leader>e', '<CMD>Oil --float<CR>', 'n', { desc = 'Open Oil [E]xplorer' } },
   },
 }
