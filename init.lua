@@ -247,6 +247,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>u', group = '[U]I' },
+        { '<leader>x', group = 'Trouble' },
       },
     },
   },
@@ -433,6 +434,8 @@ require('lazy').setup({
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ctions', { 'n', 'x' })
+
+          map('<leader>cd', vim.lsp.diagnostic.get_line_diagnostics, '[C]ode Line [D]iagnostics')
 
           -- Find references for the word under your cursor.
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
@@ -837,7 +840,6 @@ require('lazy').setup({
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
-  --  Uncomment the following line and add your plugins to `lua/milind/plugins/*.lua` to get going.
   { import = 'milind.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
